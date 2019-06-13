@@ -1,0 +1,14 @@
+<div class="list-items">
+  <div class="list-items-title">
+    <label>{{label}}</label>
+    <button *ngIf="displayNewbutton" >New</button>
+  </div>
+  <div class="list-items-input">
+    <input type="text"/>
+  </div>
+  <ul>
+    <li *ngFor="let item of listItems" class="list-item">
+      <a [routerLink]="['/random-page']">{{item}}</a>
+    </li>
+  </ul>
+</div>

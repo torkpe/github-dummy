@@ -1,0 +1,23 @@
+.main-container {
+  margin: 0;
+  padding: 105rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: black;
+  height: 3rem;
+}
+
+nav li {
+  display: inline;
+  list-style-type: none;
+  margin: 1rem;
+}
+
+nav a {
+  text-decoration: solid;
+  color: white;  
+}

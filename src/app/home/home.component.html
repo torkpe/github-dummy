@@ -1,0 +1,27 @@
+<div class="home-container">
+  <section class="left-section">
+    <div class="display-name">
+      <h3>Display name</h3>
+    </div>
+    <app-list-with-search
+      [label]="'Repositories'"
+      [displayNewbutton]="true"
+      [listItems]="listItems"
+    ></app-list-with-search>
+    <app-list-with-search
+      [label]="'Your teams'"
+      [displayNewbutton]="false"
+      [listItems]="listItems"
+    ></app-list-with-search>
+  </section>
+  <section class="main-section">
+    <div *ngFor="let item of mainSectionItems"  class="main-section-item">
+      {{item}}
+    </div>
+  </section>
+  <section class="right-section">
+    <div *ngFor="let item of mainSectionItems"  class="right-section-item">
+      {{item}}
+    </div>
+  </section>
+</div>

@@ -1,0 +1,29 @@
+.list-items {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  border-top: 1px solid;
+  padding-top: 2rem;
+}
+
+.list-items-title {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.list-items-title label {
+  font-weight: bolder;
+  margin-right: 0.3rem;
+}
+
+.list-items-title button {
+  display: inline;
+}
+
+.list-items ul {
+  padding: 0;
+}
+.list-items li {
+  list-style-type: none;
+  margin-bottom: 0.1rem;
+}

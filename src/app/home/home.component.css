@@ -1,0 +1,25 @@
+.home-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-section {
+  width: 13rem;
+  border-right: 1px solid;
+}
+
+.main-section {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.main-section-item {
+  height: 2rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  width: 30rem;
+  background: lightgray;
+}
