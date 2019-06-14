@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ListRenderItem } from '../list-renderer/list-renderer.component';
+
 
 @Component({
   selector: 'app-home',
@@ -16,6 +18,9 @@ export class HomeComponent implements OnInit {
     'hjdf dfhjfdjhfd dfhfdjhdf dfhjf dfjfd dfjhdfhj dfhdfj',
     'hjdf dfhjfdjhfd dfhfdjhdf dfhjf dfjfd dfjhdfhj dfhdfj',
   ];
+  leftItems: ListRenderItem[];
+  mainItems: ListRenderItem[];
+  rightItems: ListRenderItem[];
   constructor() { }
 
   ngOnInit() {
