@@ -1,14 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListRendererComponent } from './list-renderer.component';
+import { SideItemsDirective } from '../directives/side-items.directive';
+import { MainItemsDirective } from '../directives/main-items.directive';
 
-describe('ListRendererComponent', () => {
+fdescribe('ListRendererComponent', () => {
   let component: ListRendererComponent;
   let fixture: ComponentFixture<ListRendererComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListRendererComponent ]
+      declarations: [
+        ListRendererComponent,
+        SideItemsDirective,
+        MainItemsDirective
+      ]
     })
     .compileComponents();
   }));
@@ -21,5 +27,22 @@ describe('ListRendererComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should display mainItem', () => {
+    component.allContents = [
+      {
+        data: [
+          'hjdf dfhjfdjhfd dfhfdjhdf dfhjf dfjfd dfjhdfhj dfhdfj',
+          'hjdf dfhjfdjhfd dfhfdjhdf dfhjf dfjfd dfjhdfhj dfhdfj',
+        ],
+        component: {
+          type: 'mainItem'
+        }
+      }
+    ];
+
+    fixture.detectChanges();
+    expect(fixture.debugElement.nativeElement.textContent).toContain('hjdf dfhjfdjhfd dfhfdjhdf dfhjf dfjfd dfjhdfhj dfhdfj');
   });
 });

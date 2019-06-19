@@ -16,7 +16,7 @@ export interface ListRenderItem {
 })
 export class ListRendererComponent implements OnInit {
   @Input() allContents: ListRenderItem[];
-  @Input() mode: ListItemComponent;
+  // @Input() mode: ListItemComponent;
   @ContentChild(SideItemsDirective, {read: TemplateRef}) sideItemsTemplate;
   @ContentChild(MainItemsDirective, {read: TemplateRef}) mainItemsTemplate;
   constructor() { }

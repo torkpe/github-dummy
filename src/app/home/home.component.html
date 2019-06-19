@@ -1,15 +1,12 @@
 <div class="home-container" style="width:100%">
   <app-list-renderer [allContents]="allItems">
-    hjdhjhj
-    <section class="left-section">
-      <div *appSideItems="let item">
-          {{item}}
-      </div>
-    </section>
-    <div *appMainItems="let item" class="main-section">
+    <div *appSideItems="let item">
         {{item}}
     </div>
-    <div *appSideItems="let item" class="right-section">
+    <div *appMainItems="let item" class="main-content">
+        {{item}}
+    </div>
+    <div *appSideItems="let item">
         {{item}}
     </div>
   </app-list-renderer>
