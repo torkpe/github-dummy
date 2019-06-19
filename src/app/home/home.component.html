@@ -1,30 +1,16 @@
 <div class="home-container" style="width:100%">
-  <section class="left-section" style="width: 20%">
-    <!-- <div class="display-name">
-      <h3>Display name</h3>
-    </div> -->
-      <list-renderer [items]="leftItems"></list-renderer>
-    <!-- <app-list-with-search
-      [label]="'Repositories'"
-      [displayNewbutton]="true"
-      [listItems]="listItems"
-    ></app-list-with-search> -->
-    <!-- <app-list-with-search
-      [label]="'Your teams'"
-      [displayNewbutton]="false"
-      [listItems]="listItems"
-    ></app-list-with-search> -->
-  </section>
-  <section class="main-section">
-    <!-- <div *ngFor="let item of mainSectionItems"  class="main-section-item">
-      {{item}}
-    </div> -->
-    <list-renderer [items]="centerItems"></list-renderer>
-  </section>
-  <section class="right-section">
-    <!-- <div *ngFor="let item of mainSectionItems"  class="right-section-item">
-      {{item}}
-    </div> -->
-    <list-renderer [items]="rightItems"></list-renderer>
-  </section>
+  <app-list-renderer [allContents]="allItems">
+    hjdhjhj
+    <section class="left-section">
+      <div *appSideItems="let item">
+          {{item}}
+      </div>
+    </section>
+    <div *appMainItems="let item" class="main-section">
+        {{item}}
+    </div>
+    <div *appSideItems="let item" class="right-section">
+        {{item}}
+    </div>
+  </app-list-renderer>
 </div>

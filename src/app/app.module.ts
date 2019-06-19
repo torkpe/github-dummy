@@ -8,13 +8,18 @@ import { ListWithSearchComponent } from './list-with-search/list-with-search.com
 import { RandomPageComponent } from './random-page/random-page.component';
 import { ListRendererComponent } from './list-renderer/list-renderer.component';
 
+import { MainItemsDirective } from './directives/main-items.directive';
+import { SideItemsDirective } from './directives/side-items.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ListWithSearchComponent,
     RandomPageComponent,
-    ListRendererComponent
+    ListRendererComponent,
+    MainItemsDirective,
+    SideItemsDirective,
   ],
   imports: [
     BrowserModule,
