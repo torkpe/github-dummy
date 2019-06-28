@@ -1,13 +1,10 @@
 <div class="home-container" style="width:100%">
-  <app-list-renderer [allContents]="allItems">
-    <div *appSideItems="let item">
-        {{item}}
-    </div>
-    <div *appMainItems="let item" class="main-content">
-        {{item}}
-    </div>
-    <div *appSideItems="let item">
-        {{item}}
-    </div>
+  <app-list-renderer [allContents]="leftItems">
+  </app-list-renderer>
+  <app-list-renderer [allContents]="rightItems">
+    <ng-template let-data>
+
+      <div >{{data.items[0]}}</div>
+    </ng-template>
   </app-list-renderer>
 </div>

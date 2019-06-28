@@ -1,4 +1,4 @@
-<ng-container *ngFor="let content of allContents" [ngSwitch]="content.component.type">
+<!-- <ng-container *ngFor="let content of allContents" [ngSwitch]="content.component.type">
   <ng-container *ngSwitchCase="'mainItem'">
     <ng-container *ngFor="let item of content.data">
       <ng-container *ngTemplateOutlet="mainItemsTemplate ; context: {$implicit: item}"></ng-container>
@@ -9,4 +9,8 @@
       <ng-container *ngTemplateOutlet="sideItemsTemplate ; context: {$implicit: item}"></ng-container>
     </li>
   </ul>
+</ng-container> -->
+<ng-content></ng-content>
+<ng-container>
+  <ng-template #target></ng-template>
 </ng-container>

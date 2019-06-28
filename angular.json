@@ -25,6 +25,7 @@
             "styles": [
               "src/styles.css"
             ],
+            "sourceMap": true,
             "scripts": [],
             "es5BrowserSupport": true
           },

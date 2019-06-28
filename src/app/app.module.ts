@@ -10,6 +10,7 @@ import { ListRendererComponent } from './list-renderer/list-renderer.component';
 
 import { MainItemsDirective } from './directives/main-items.directive';
 import { SideItemsDirective } from './directives/side-items.directive';
+import { ListViewComponent } from './list-view/list-view.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +21,17 @@ import { SideItemsDirective } from './directives/side-items.directive';
     ListRendererComponent,
     MainItemsDirective,
     SideItemsDirective,
+    ListViewComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    ListViewComponent,
+    ListWithSearchComponent
+  ]
 })
 export class AppModule { }
